@@ -1,0 +1,120 @@
+body{
+    font-family: fantasy;
+    /* Color del fondo del padre (body) */
+    background-color: #BCBBB8;
+    /* Tamaño del padre (body) para poder alinear el hijo (main) */
+    /* 1vh = 1% = vh = viewport heigth, 1vw = 1% = vw = viewport width */
+    width: 100vw;
+    height: 100vh;
+    /* Propiedades para alinear el hijo (main) al centro vertical y horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    /* Color del fondo del padre (main) */
+    background-color: #24323D;
+    /* Borde del padre (main) */
+    border-radius: 5px;
+    /* Tamaño del padre (main) */
+    width: 30vw;
+    height: 65vh;
+    /* Crear una columna de 25vw y tres filas de 15vh 10vh y 35vh y alinear a los hijos 
+    (.part1, .part2, .part3) al centro horizontalmente*/
+    display: grid;
+    grid-template-columns: 25vw;
+    grid-template-rows: 15vh 10vh 30vh;
+    justify-content: center;
+}
+
+.part1{
+    margin-top: 20px;
+    /* Crear dos columnas de 12.5 vw y alinear los elementos hijos (.sign-up y log in) al
+    centro verticalmente*/
+    display: grid;
+    align-items: center;
+    grid-template-columns: 12.5vw 12.5vw;
+}
+
+.sign-up{
+    /* Alto del elemento */
+    height: 8vh;
+    background-color: #1AB188;
+    text-decoration: none;
+    color: white;
+    /* Propiedades para alinear el elemento al centro vertical y horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-in{
+    /* Alto del elemento */
+    height: 8vh;
+    background-color: #435259;
+    text-decoration: none;
+    color: white;
+    /* Propiedades para alinear el elemento al centro vertical y horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part2{
+    color: white;
+    font-size: 1.4rem;
+    /* Propiedades para alinear el elemento al centro vertical y horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part3{
+    /* Crear dos filas para los elementos hijos (.data1 y .data2) */
+    display: grid;
+    grid-template-rows: 10vh 20vh;
+}
+
+.data1{
+    /* Propiedades para alinear los hijos (.fl-name) al centro verticalmente y 
+    horizontalmente separarlos*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fl-name{
+    background-color: #24323B;
+    border: 2px solid #7A8891;
+    /* Ancho y alto del input */
+    width: 11.5vw;
+    height: 5vh;
+    color: #7A8891;
+    font-size: 1.05rem;
+}
+
+.data2{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-rows: 5vh 5vh 6vh;
+}
+
+.email-pass{
+    background-color: #24323B;
+    border: 2px solid #7A8891;
+    /* Alto del input */
+    height: 5vh;
+    color: #7A8891;
+    font-size: 1.05rem;
+}
+
+.b-submit{
+    height: 8vh;
+    border: none;
+    color: white;
+    background-color: #1AB188;
+    /* Letras en mayúsculas */
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
